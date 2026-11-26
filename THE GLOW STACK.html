@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Glow Stack | Skincare Serums</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#ffffff;--ink:#3b2a21;--mute:#8a7567;--card:#faf6f2;--line:#eadfd5;--acc:#5c4033;--onacc:#ffffff;--acc2:#f1ebfa;--vio:#7c5cbf;--bar:#3b2a21;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1c1512;--ink:#f3ebe4;--mute:#b5a294;--card:#271e19;--line:#3a2d26;--acc:#d2b29a;--onacc:#1c1512;--acc2:#2f2638;--vio:#b9a3e8;--bar:#000;color-scheme:dark}}
+*{box-sizing:border-box}html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;line-height:1.5}
+.ticker{background:var(--bar);color:#fff;overflow:hidden;white-space:nowrap;font-size:.78rem;letter-spacing:.08em;padding:.5rem 0}
+.ticker span{display:inline-block;padding-left:100%;animation:t 28s linear infinite}
+@keyframes t{to{transform:translateX(-100%)}}
+header,main,footer{max-width:1000px;margin:0 auto;padding:0 1rem}
+header{display:flex;justify-content:space-between;align-items:center;padding-top:1rem;padding-bottom:1rem}
+.logo,h1,h2,h3,.price{font-family:"Cormorant Garamond",Georgia,"Times New Roman",serif}
+.logo{font-weight:700;font-size:1.9rem;letter-spacing:.01em;color:var(--vio)}
+nav a{color:var(--mute);text-decoration:none;margin-left:1rem;font-size:.9rem}
+.hero h1{font-size:clamp(2.2rem,6vw,3.4rem);font-weight:600;line-height:1.1;margin:.5rem 0}
+.hero p{color:var(--mute);margin:0 0 1rem}
+.incl{display:flex;flex-wrap:wrap;gap:.5rem;margin:.5rem 0 1.5rem}
+.incl b{background:var(--acc2);color:var(--vio);border-radius:99px;padding:.3rem .8rem;font-size:.8rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:1rem}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:1rem;display:flex;flex-direction:column;gap:.4rem}
+.ph{height:110px;border-radius:10px;background:linear-gradient(135deg,var(--card),var(--acc2));display:grid;place-items:center;font-size:2rem}
+.tag{font-size:.68rem;font-weight:700;color:var(--vio)}
+.card h3{margin:0;font-size:1.25rem;font-weight:700}.card p{margin:0;color:var(--mute);font-size:.82rem;flex:1}
+.price{font-weight:700;font-size:1.35rem}
+.row{display:flex;gap:.5rem;align-items:center}
+.qty{display:flex;align-items:center;border:1px solid var(--line);border-radius:8px}
+.qty button{border:0;background:none;color:var(--ink);width:30px;height:32px;font-size:1rem;cursor:pointer}
+.qty span{min-width:22px;text-align:center}
+.add{flex:1;border:0;background:var(--acc);color:var(--onacc);border-radius:8px;height:34px;font-weight:700;cursor:pointer}
+.tabs,.chips{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:.8rem}
+.tab,.chip{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:99px;padding:.45rem 1.1rem;font:inherit;font-size:.9rem;cursor:pointer}
+.tab{font-weight:700;padding:.55rem 1.4rem}
+.tab.on{background:var(--acc);color:var(--onacc);border-color:var(--acc)}
+.chip.on{background:var(--acc2);color:var(--vio);border-color:var(--vio);font-weight:700}
+.empty{color:var(--mute);padding:2rem 0}
+h2{margin:2rem 0 .5rem}
+#cart{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:1rem}
+#cart ul{list-style:none;padding:0;margin:0 0 .5rem}
+#cart li{display:flex;justify-content:space-between;padding:.3rem 0;border-bottom:1px dashed var(--line);font-size:.92rem}
+.tot{display:flex;justify-content:space-between;font-weight:800;margin:.5rem 0}
+input,select{width:100%;padding:.6rem;border-radius:8px;border:1px solid var(--line);background:var(--bg);color:var(--ink);margin:.25rem 0;font:inherit}
+.btn{width:100%;border:0;background:var(--acc);color:var(--onacc);border-radius:8px;padding:.7rem;font-weight:700;cursor:pointer;margin-top:.4rem}
+.btn.alt{background:var(--acc2);color:var(--vio)}
+details{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:.7rem 1rem;margin:.5rem 0}
+summary{font-weight:700;cursor:pointer}
+.pay{display:flex;gap:.5rem;flex-wrap:wrap}.pay b{border:1px solid var(--line);border-radius:8px;padding:.3rem .8rem;font-size:.85rem}
+footer{color:var(--mute);font-size:.8rem;padding-top:2rem;padding-bottom:2rem}
+</style>
+</head>
+<body>
+<div class="ticker"><span>CURRENT BATCH IS NOW OPEN • PREORDER OPEN NOW • CURRENT BATCH IS NOW OPEN • PREORDER OPEN NOW • CURRENT BATCH IS NOW OPEN • PREORDER OPEN NOW</span></div>
+<header><div class="logo">The Glow Stack</div><nav><a href="#shop">Shop</a><a href="#order">Order</a><a href="#faq">FAQs</a></nav></header>
+<main>
+<section class="hero">
+<h1>Skincare &amp; Glow Essentials</h1>
+<p>Ready stock and pasabuy batches, delivered nationwide across the Philippines.</p>
+<div class="incl"><b>Batch based ordering</b><b>Nationwide shipping</b><b>Order updates via Viber</b></div>
+</section>
+<section id="shop">
+<div class="tabs"><button class="tab" data-s="onhand">On-hand</button><button class="tab" data-s="pasabuy">Pasabuy</button></div>
+<div class="chips" id="chips"></div>
+<div class="grid" id="grid"></div>
+</section>
+<section id="order">
+<h2>Your order</h2>
+<div id="cart"><ul id="lines"></ul>
+<div class="tot"><span>Total</span><span id="total">₱0.00</span></div>
+<input id="name" placeholder="Full name">
+<input id="addr" placeholder="Shipping address">
+<select id="pay"><option>GCash</option><option>GoTyme</option><option>Bank transfer</option></select>
+<button class="btn" id="copy">Copy order summary</button>
+<button class="btn alt" id="viber">Open Viber community</button>
+</div>
+</section>
+<section id="faq"><h2>FAQs</h2>
+<details><summary>How does pasabuy work?</summary><p>Orders are collected per batch. Once the batch closes, items are purchased and shipped to you when they arrive.</p></details>
+<details><summary>How do I pay?</summary><p>Send payment after confirming your order. Accepted channels are shown below.</p><div class="pay"><b>GCash</b><b>GoTyme</b><b>Bank transfer</b></div></details>
+<details><summary>When will I get my order?</summary><p>Arrival depends on the batch schedule. Updates are posted in the community chat.</p></details>
+</section>
+</main>
+<footer>© 2026 The Glow Stack • Cosmetic skincare products for external use only. Not medical advice.</footer>
+<script>
+var P=[
+{s:"onhand",c:"skincare",f:1,n:"Sample On-hand Serum",d:"Replace with your ready stock item.",p:500,e:"🌿"},
+{s:"onhand",c:"skincare",n:"Sample On-hand Cleanser",d:"Replace with your ready stock item.",p:350,e:"🧼"},
+{s:"pasabuy",n:"Private Label Serum A",d:"Brightening and hydrating daily serum.",p:848.10,e:"✨"},
+{s:"pasabuy",n:"Private Label Serum B",d:"Smoothing and glow-boosting serum.",p:848.10,e:"💧"},
+{s:"pasabuy",n:"NAD+ PDRN Serum",d:"Topical skin-renewal serum.",p:848.10,e:"🌸"},
+{s:"pasabuy",n:"Professional Serum C",d:"Everyday professional-line serum.",p:596.10,e:"🧴"},
+{s:"pasabuy",n:"Professional Serum D",d:"Everyday professional-line serum.",p:596.10,e:"🫧"}
+];
+var CATS=[["all","All"],["featured","★ Featured"],["peptides","Peptides"],["skincare","Skincare"],["glutathione","Glutathione & Boosters"]];
+var sec="onhand",cat="all",q=P.map(function(){return 1}),cart={};
+function f(n){return "₱"+n.toLocaleString("en-PH",{minimumFractionDigits:2,maximumFractionDigits:2})}
+var g=document.getElementById("grid"),ch=document.getElementById("chips");
+function show(x){if(x.s!==sec)return false;if(sec==="pasabuy")return true;
+if(cat==="all")return true;if(cat==="featured")return !!x.f;return x.c===cat}
+function render(){
+document.querySelectorAll(".tab").forEach(function(t){t.classList.toggle("on",t.dataset.s===sec)});
+ch.style.display=sec==="onhand"?"flex":"none";
+ch.innerHTML="";
+CATS.forEach(function(k){var b=document.createElement("button");b.className="chip"+(k[0]===cat?" on":"");b.textContent=k[1];
+b.onclick=function(){cat=k[0];render()};ch.appendChild(b)});
+g.innerHTML="";var n=0;
+P.forEach(function(x,i){if(!show(x))return;n++;
+var c=document.createElement("div");c.className="card";
+var tag=sec==="pasabuy"?"OPEN FOR PREORDER":(x.f?"★ FEATURED • READY TO SHIP":"READY TO SHIP");
+c.innerHTML='<div class="ph">'+x.e+'</div><span class="tag">'+tag+'</span><h3>'+x.n+'</h3><p>'+x.d+'</p><div class="price">'+f(x.p)+'</div><div class="row"><div class="qty"><button>−</button><span>'+q[i]+'</span><button>+</button></div><button class="add">Add to Cart</button></div>';
+var b=c.querySelectorAll(".qty button"),sp=c.querySelector(".qty span");
+b[0].onclick=function(){q[i]=Math.max(1,q[i]-1);sp.textContent=q[i]};
+b[1].onclick=function(){q[i]++;sp.textContent=q[i]};
+c.querySelector(".add").onclick=function(){cart[i]=(cart[i]||0)+q[i];draw();location.hash="order"};
+g.appendChild(c)});
+if(!n){var e=document.createElement("div");e.className="empty";e.textContent="Coming soon. Check back after the next restock.";g.appendChild(e)}}
+document.querySelectorAll(".tab").forEach(function(t){t.onclick=function(){sec=t.dataset.s;cat="all";render()}});
+function draw(){var l=document.getElementById("lines"),t=0;l.innerHTML="";
+Object.keys(cart).forEach(function(k){var x=P[k],a=cart[k]*x.p;t+=a;
+var li=document.createElement("li");li.innerHTML="<span>"+cart[k]+" × "+x.n+'</span><span>'+f(a)+"</span>";l.appendChild(li)});
+if(!t)l.innerHTML="<li>Your cart is empty.</li>";
+document.getElementById("total").textContent=f(t)}
+function summary(){var s="ORDER\nName: "+document.getElementById("name").value+"\nAddress: "+document.getElementById("addr").value+"\nPayment: "+document.getElementById("pay").value+"\n";
+Object.keys(cart).forEach(function(k){s+=cart[k]+" x "+P[k].n+" "+f(cart[k]*P[k].p)+"\n"});
+return s+"Total: "+document.getElementById("total").textContent}
+document.getElementById("copy").onclick=function(){var s=summary(),b=this;
+try{navigator.clipboard.writeText(s).then(function(){b.textContent="Copied! Paste it in Viber or Messenger"})}catch(e){b.textContent="Copy not supported here"}};
+document.getElementById("viber").onclick=function(){window.open("https://invite.viber.com/YOUR-LINK-HERE","_blank")};
+render();draw();
+</script>
+</body>
+</html>
